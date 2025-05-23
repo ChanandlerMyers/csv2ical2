@@ -46,7 +46,7 @@ def main(csv_name: str, ics_name: str):
             description = row[5].strip()
             location = row[6].strip()
             uid = row[7].strip()
-            dtstamp = datetime.strptime(date_string, "%Y-%m-%d")
+            dtstamp = datetime.datetime.strptime(date_string, "%Y-%m-%d")
 
             event = Event()
             event.add("summary", summary)
