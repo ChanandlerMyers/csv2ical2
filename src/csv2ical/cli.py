@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CLI for csv2ical.
+"""CLI for csv2ical2.
 
 This module creates a CLI app and validates arguments.
 """
