@@ -45,6 +45,8 @@ def main(csv_name: str, ics_name: str):
             dtend = datetime.datetime.strptime(end, "%Y-%m-%d %H:%M")
             description = row[5].strip()
             location = row[6].strip()
+            uid = row[7].strip()
+            dtstamp = row[8].strip()
 
             event = Event()
             event.add("summary", summary)
@@ -52,6 +54,8 @@ def main(csv_name: str, ics_name: str):
             event.add("dtend", dtend)
             event.add("description", description)
             event.add("location", location)
+            event.add("uid", uid)
+            event.add("dtstamp", dtstamp)
             cal.add_component(event)
 
         with open(ics_name, "wb") as ics_file:
